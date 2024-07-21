@@ -1,0 +1,700 @@
+
+
+/* title :   "Lexend", sans-serif*/
+
+:root{
+    --bg-color: #850F8D;
+    --hover-color: #E49BFF;
+    --text-color: #C738BD;
+    --transparent-color: #F8F9D7
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Amaranth", sans-serif;
+    color: #f7f5f5;
+}
+
+body{
+    background: #000;
+}
+
+
+#section_header{
+    width: 100%;
+    /* height: 85vh; */
+    background: url(https://i.pinimg.com/564x/ac/e6/92/ace69237e3208efc696c8eb2b2c5a8eb.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navBar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 100px;
+    margin: 2rem ;
+}
+
+
+.navBar .navBar_items{
+    margin-right: 5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.navBar_items li{
+    list-style: none;
+    margin: 1rem;
+}
+
+.navBar_items li a{
+    display: block;
+    color: var(--transparent-color);
+    text-decoration: none;
+    /* margin: 0.1rem; */
+    font-family: "Lexend", sans-serif;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    position: relative;
+    transition: all ease-in-out 0.5s ;
+}
+
+
+.navBar_items li a:hover{
+    font-size: 1.1rem;
+    padding: 0.3rem;
+    margin: 0.3rem;
+}
+
+.navBar_items li a.active{
+    border-bottom: 0.2rem solid var(--hover-color);
+    font-size: 1.1rem;
+    padding: 0.3rem;
+    margin: 0.3rem;
+}
+
+
+.navBar_items li a::after{
+    content: '';
+    width: 0;
+    height: 0.2rem;
+    background: var(--hover-color);
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    transition: 0.5s;
+}
+
+.navBar_items li a:hover::after{
+    width: 100%;
+}
+
+
+
+
+.header_content{
+    margin: 1rem 2rem;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* background: url(images/bg2.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3; */
+}
+
+
+
+.header_text{
+    flex-basis: 60%;
+    padding: 0.5rem;
+}
+
+.header_text h1{
+    font-family: "Lexend", sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.header_text p{
+    font-size: 1rem;
+}
+
+
+
+.header_text .btn{
+    font-size: 1rem;
+    width: 60%;
+    /* font-family: "Lexend", sans-serif; */
+    font-weight: bold;
+    margin-top: 3rem;
+    padding: 0.7rem;
+    border: 1px solid var(--hover-color);
+    border-radius: 0.3rem;
+    background: var(--bg-color);
+    cursor: pointer;
+    box-shadow: 0px 2px 10px 4px rgba(232, 15, 185, 0.653);
+    transition: background 0.6s, all ease-in-out 0.6s;
+}
+
+.header_text .btn:hover{
+    font-size: 1.1rem;
+    padding: 0.9rem;
+    background: var(--hover-color);
+    box-shadow: 0px 2px 11px 4px rgba(232, 15, 185, 0.653);
+
+}
+
+
+.header_content .header_img{
+    width: 500px;
+    height: 300px;
+    margin-bottom: 4rem;
+    flex-basis: 30%;
+    background: url(images/gb-f.jpg);
+    background-position: center;
+    background-size: cover;
+    border: 3px solid var(--hover-color);
+    border-radius: 50%;
+    box-shadow: 0px 2px 40px 1px rgba(228, 84, 197, 0.952);
+    transition: all ease 0.6s;
+}
+
+.header_content .header_img:hover{
+    transform:  translateX(-20px);
+}
+
+
+
+.header_text_container{
+    width: 70%;
+    display: grid;
+    margin-top: -3rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.3rem;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    background: rgba(65, 62, 62, 0.795);
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_text_container .box{
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 1.5rem;
+}
+
+
+.header_text_container .box h2{
+    font-size: 1.7rem;
+    font-family: "Lexend", sans-serif;
+    font-weight: bold;
+    color: var(--transparent-color);
+    margin-bottom: 0.3rem;
+    text-align: center;
+}
+
+
+.header_text_container .box p{
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+.programme{
+    width: 100%;
+    margin: 10rem 1rem;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.programme .titre{
+    font-size: 2rem;
+    font-family: "Lexend", sans-serif;
+    color: #f7f5f5;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem auto;
+    border-radius: 4rem 0.2rem 4rem 0.2rem;
+    background: rgba(51, 49, 49, 0.703);
+}
+
+
+.programme .box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 5rem;
+    margin-top: 2rem;
+}
+
+.programme .box .card{
+    width: 100%;
+    height: 70vh;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    background: rgba(51, 49, 49, 0.703);
+    box-shadow: 0px 2px 15px 1px rgba(255, 255, 255, 0.763);
+    transition: all 0.6s;
+}
+
+.programme .box .card:hover{
+    transform: translateY(-20px);
+}
+
+
+.programme .box .card img{
+    width: 100%;
+    height: 60%;
+    border-radius: 1rem 1rem 0rem 0rem;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.programme .box .card h2{
+    font-size: 1.2rem;
+    font-family: "Lexend", sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+.programme .box .card p{
+    font-size: 0.9rem;
+    text-align: center;
+    margin: 1rem 0.5rem;
+    /* padding: 1rem; */
+}
+
+
+/* ------------- Section trainer ------------- */
+
+
+.section_trainer{
+    width: 100%;
+    background: rgba(51, 49, 49, 0.703);
+    padding: 1rem;
+}
+
+.section_trainer .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section_trainer .container .box_img{
+    flex-basis: 45%;
+    background: var(--hover-color);
+    border-radius: 2rem;
+}
+
+.section_trainer .container .box_img img{
+    width: 100%;
+    border-radius: 2rem;
+    position: relative;
+    right: -2%;
+}
+
+.section_trainer .container .box_text{
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .box_text h2{
+    font-size: 2rem;
+    font-family: "Lexend", sans-serif;
+    color: #f7f5f5;
+    text-align: center;
+    padding: 1.4rem;
+    margin-bottom: 5rem;
+    border-radius: 4rem 0.2rem 4rem 0.2rem;
+    background: rgba(51, 49, 49, 0.703);
+}
+
+.container .box_text p{
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.4rem;
+}
+
+
+
+/* --------------- section abonnement --------- */
+
+.section_abonnement{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.section_abonnement h1{
+    font-size: 2rem;
+    width: 40%;
+    font-family: "Lexend", sans-serif;
+    color: #f7f5f5;
+    text-align: center;
+    padding: 1.4rem;
+    margin-bottom: 3rem;
+    border-radius: 4rem 0.2rem 4rem 0.2rem;
+    background: rgba(51, 49, 49, 0.703);
+}
+
+.section_abonnement .box{
+    width: 100%;
+    margin-left:  2rem;
+    margin-right:  2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+
+.section_abonnement .box .card{
+    width: 80%;
+    height: 100%;
+    /* padding: 2rem; */
+    margin: 1rem;
+    border-radius: 1rem;
+    background: rgba(51, 49, 49, 0.703);
+    transition: all 0.6s;
+}
+
+.section_abonnement .box .card:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 2px 15px 1px rgba(255, 255, 255, 0.763);
+    
+}
+
+.section_abonnement .box .card.active{
+    border: 2px solid var(--hover-color);
+    box-shadow: 0px 2px 15px 1px var(--transparent-color);
+
+}
+
+.section_abonnement .card .card_content{
+    /* width: 100%; */
+    padding: 2rem;
+    background: rgba(51, 49, 49, 0.703);
+    border-radius: 1rem 1rem 5rem 0;
+    
+}
+
+.section_abonnement .card_content h2{
+    font-family: "Lexend", sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--transparent-color);
+    margin-bottom: 1rem;
+}
+
+.section_abonnement .card_content ul li{
+    list-style-type: circle;
+    font-size: 1rem;
+    line-height: 2rem;
+}
+
+.section_abonnement .card_content .price{
+    font-family: "Lexend", sans-serif;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--hover-color);
+    font-weight: bold;
+}
+
+
+.section_abonnement .card .card_btn{
+    position: relative;
+    bottom: -4%;
+    /* left: 30%; */
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 2rem auto;
+    font-size: 1.2rem;
+    /* color: var(--text-color); */
+    background: var(--bg-color);
+    padding: .7rem;
+    border: 1px solid var(--hover-color);
+    border-radius: 6px;
+    box-shadow: 0px 2px 5px var(--transparent-color);
+    cursor: pointer;
+    transition: background ease-in 0.3s, all 0.4s ; 
+}
+
+.section_abonnement .card .card_btn:hover{
+    transform: scale(0.8);
+    background: transparent;
+}
+
+
+
+
+/* ------------- Commentaire de nos clients----------- */
+
+.section_client{
+    width: 100%;
+    margin: 10rem 1rem;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.section_client .titre{
+    font-size: 2rem;
+    font-family: "Lexend", sans-serif;
+    color: #f7f5f5;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 1.8rem;
+    margin: 1rem auto;
+    border-radius: 4rem 0.2rem 4rem 0.2rem;
+    background: rgba(51, 49, 49, 0.703);
+}
+
+
+.section_client .box{
+    /* width: 80%; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 50px;
+    margin-top: 2rem;
+}
+
+.section_client .box .card{
+    width: 100%;
+    /* height: 60%; */
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    background: rgba(51, 49, 49, 0.703);
+    box-shadow: 0px 2px 5px 1px rgba(255, 255, 255, 0.763);
+    transition: all 0.6s;
+}
+
+.section_client .box .card:hover{
+    transform: translateY(-20px);
+}
+
+
+.section_client .box .card img{
+    width: 100%;
+    /* height: 50%; */
+    border-radius: 1rem 1rem 0rem 0rem;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.section_client .box .card h2{
+    font-size: 1.2rem;
+    font-family: "Lexend", sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+.section_client .box .card p{
+    font-size: 0.9rem;
+    /* text-align: center; */
+    margin: 1rem 0.5rem;
+    /* padding: 1rem; */
+}
+
+
+.section_client .card .stars{
+    width: 90%;
+}
+
+.section_client .card .stars ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.section_client .card .stars ul li{
+    list-style: none;
+}
+
+
+.section_client .card .stars ul li i{
+    font-size: 1.2rem;
+    color: var(--transparent-color);
+}
+
+
+/* ------------- Section Footer ------------ */
+
+.section_footer{
+    width: 100%;
+    background:rgba(51, 49, 49, 0.703);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 100px;
+}
+
+
+.section_footer .logo{
+    width: 40%;
+}
+
+.section_footer .logo img{
+    width: 100%;
+}
+
+
+.section_footer .text_container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section_footer .text_container ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section_footer .text_container  ul li{
+    list-style: none;
+    margin: 1rem;
+    text-align: left;
+}
+
+.section_footer .text_container li a{
+    display: block;
+    font-size: 1.2rem;
+    text-decoration: none;
+    text-align: left;
+    transition: color ease-in 0.3s;
+}
+
+
+.section_footer .text_container li a:hover{
+    color: var(--hover-color);
+}
+
+
+
+.section_footer .follow_us .follow_btn{
+    width: 50%;
+    height: 50%;
+    padding: 0.2rem;
+    margin: 0.3rem auto;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #f7f5f5;
+    background: transparent;
+    text-align: center;
+    border: 1px solid var(--bg-color);
+    cursor: pointer;
+    transition: all ease-in 0.3s;
+}
+
+.section_footer .follow_us .follow_btn:hover{
+    transform: scale(0.9);
+}
+
+
+
+
+.section_footer .follow_us{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+
+.section_footer .follow_us .social_media{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section_footer .follow_us .social_media .links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.2rem;
+}
+
+.section_footer .follow_us .social_media .links a{
+    list-style: none;
+    margin: 0.2rem 1rem;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--transparent-color);
+    color: var(--bg-color);
+    transition: background ease-in 0.4s, transform ease-in-out 0.4s;
+}
+
+
+
+.section_footer .follow_us .social_media .links a i{
+    font-size: 1.6rem;
+    color: var(--bg-color);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: var(--transparent-color); */
+    transition: background ease-in 0.6s, transform ease-in-out 0.5s;
+}
+
+.section_footer .follow_us .social_media .links a:hover{
+    background: var(--bg-color);
+    transform: scale(1.2);
+    color: var(--transparent-color);
+    
+}
+
+
+.section_footer .follow_us .social_media .links a:hover i{
+    color: var(--transparent-color);
+}
