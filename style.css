@@ -105,6 +105,11 @@ body{
 }
 
 
+.navBar i{
+    font-size: 1.6rem;
+    color: var(--transparent-color);
+    display: none;
+}
 
 
 .header_content{
@@ -338,7 +343,7 @@ body{
 
 .container .box_text p{
     font-size: 1rem;
-    text-align: center;
+    /* text-align: center; */
     line-height: 1.4rem;
 }
 
@@ -860,6 +865,111 @@ footer .copyright a{
 
 
 
+
+@media screen and (max-width: 740px) {
+    .header_text h1{
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .header_text p{
+        font-size: 0.8rem;
+    }
+
+    .navBar_items{
+        position: fixed;
+        top: -4%;
+        right: -100%;
+        display: flex;
+        flex-direction: column;
+        margin: 1rem auto;
+        justify-content: center;
+        align-items: center;
+        background: var(--bg-color);
+        width: 30%;
+        height: 110vh;
+        transition: all ease-in 0.5s;
+    }
+
+    .navBar_items li a{
+        display: block;
+        /* margin-top: -5rem; */
+        font-size: 1rem;
+        border: none;
+    }
+
+    
+.navBar_items li a:hover{
+    font-size: 1.1rem;
+    padding: 0.3rem;
+    margin: 0.3rem;
+}
+
+.navBar_items li, a{
+    width: 100%;
+    margin: 0.2rem auto;
+    text-align: center;
+}
+
+.navBar_items li a.active{
+    border: none;
+    width: 100%;
+    display: block;
+    background: var(--transparent-color);
+    color: var(--bg-color);
+    font-size: 1.1rem;
+    padding: 0.3rem;
+    margin: 0.3rem;
+    text-align: center;
+    }
+
+
+    .navBar_items li a:hover::after{
+        width: 0;
+    }
+
+    .navBar_items .fa-regular{
+        display: flex;
+        right: -10%;
+        top: 5%;
+        font-size: 2rem;
+        margin: -3rem -8rem -3rem 0;
+        cursor: pointer;
+    }
+
+    .navBar .fa-bars{
+        display: block;
+        position: absolute;
+        right: 5%;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+
+    .programme .box .card{
+        width: 100%;
+        height: 90vh;
+    }
+
+    .container .box_text h2{
+        font-size: 1.3rem;
+        padding: 1.3rem;
+    }
+
+
+    .section_abonnement h1{
+        font-size: 1.8rem;
+        width: 60%;
+    }
+
+    .section_abonnement .card_content .price{
+        font-size: 0.9rem;
+    }
+
+    .section_client .titre{
+        font-size: 1.4rem;
+    }
+}
 
 
 
