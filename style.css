@@ -10,6 +10,12 @@
 }
 
 
+body{
+    background: #000;
+    margin: 0;
+    padding: 0;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -18,10 +24,7 @@
     color: #f7f5f5;
 }
 
-body{
-    background: #000;
-    margin: 0 1.1rem;
-}
+
 
 
 #section_header{
@@ -118,10 +121,6 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* background: url(images/bg2.jpg);
-    background-size: cover;
-    background-position: center;
-    opacity: 0.3; */
 }
 
 
@@ -147,7 +146,6 @@ body{
 .header_text .btn{
     font-size: 1rem;
     width: 60%;
-    /* font-family: "Lexend", sans-serif; */
     font-weight: bold;
     margin-top: 3rem;
     padding: 0.7rem;
@@ -162,8 +160,6 @@ body{
 .header_text .btn:hover{
     background: transparent;
     transform: scale(0.9);
-    /* box-shadow: 0px 2px 11px 4px rgba(232, 15, 185, 0.653); */
-
 }
 
 
@@ -227,7 +223,7 @@ body{
 
 .programme{
     width: 100%;
-    margin: 10rem 1rem;
+    margin-top: 7rem;
     display: flex;
     flex-direction: column; 
     justify-content: space-between;
@@ -240,6 +236,7 @@ body{
     color: #f7f5f5;
     text-align: center;
     padding: 1.4rem;
+    text-transform: capitalize;
     margin: 1rem auto;
     border-radius: 4rem 0.2rem 4rem 0.2rem;
     background: rgba(51, 49, 49, 0.703);
@@ -248,6 +245,7 @@ body{
 
 .programme .box{
     display: grid;
+    max-width: 90%;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 3rem;
     margin-top: 2rem;
@@ -255,12 +253,11 @@ body{
 
 .programme .box .card{
     width: 100%;
-    height: 70vh;
+    height: 100vh;
     border-radius: 1rem;
     margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     background: rgba(51, 49, 49, 0.703);
     box-shadow: 0px 2px 15px 1px rgba(255, 255, 255, 0.763);
@@ -289,7 +286,6 @@ body{
 
 .programme .box .card p{
     font-size: 0.9rem;
-    text-align: center;
     margin: 1rem 0.5rem;
 }
 
@@ -298,6 +294,7 @@ body{
 
 
 .section_trainer{
+    margin-top: 4rem;
     width: 100%;
     background: rgba(51, 49, 49, 0.703);
     padding: 1rem;
@@ -337,20 +334,21 @@ body{
     text-align: center;
     padding: 1.4rem;
     margin-bottom: 5rem;
+    text-transform: capitalize;
     border-radius: 4rem 0.2rem 4rem 0.2rem;
     background: rgba(51, 49, 49, 0.703);
 }
 
 .container .box_text p{
     font-size: 1rem;
-    /* text-align: center; */
     line-height: 1.4rem;
-}
+
+} 
 
 
 
 /* --------------- section abonnement --------- */
-
+ 
 .section_abonnement{
     width: 100%;
     display: flex;
@@ -365,6 +363,7 @@ body{
     width: 40%;
     font-family: "Lexend", sans-serif;
     color: #f7f5f5;
+    text-transform: capitalize;
     text-align: center;
     padding: 1.4rem;
     margin-bottom: 3rem;
@@ -374,17 +373,19 @@ body{
 
 .section_abonnement .box{
     width: 100%;
+    max-width: 90%;
     margin-left:  2rem;
     margin-right:  2rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 40px;
+    gap: 20px;
 }
 
 
 .section_abonnement .box .card{
     width: 100%;
-    margin: 1rem;
+    /* max-width: 90%; */
+    margin: 1rem 0.2rem;
     border-radius: 1rem;
     background: rgba(51, 49, 49, 0.703);
     transition: all 0.6s;
@@ -396,14 +397,9 @@ body{
     transform: scale(1.1);
 }
 
-.section_abonnement .box .card.active{
-    border: 2px solid var(--hover-color);
-    box-shadow: 0px 2px 15px 1px var(--transparent-color);
 
-}
 
 .section_abonnement .card .card_content{
-    /* width: 100%; */
     padding: 2rem;
     background: rgba(51, 49, 49, 0.703);
     border-radius: 1rem 1rem 5rem 0;
@@ -437,7 +433,6 @@ body{
 .section_abonnement .card .card_btn{
     position: relative;
     bottom: -4%;
-    /* left: 30%; */
     display: block;
     justify-content: center;
     align-items: center;
@@ -456,13 +451,13 @@ body{
 .section_abonnement .card .card_btn:hover{
     transform: scale(0.8);
     background: transparent;
-}
+} 
 
 
 
 
 /* ------------- Commentaire de nos clients----------- */
-
+ 
 .section_client{
     width: 100%;
     margin: 10rem 1rem;
@@ -489,7 +484,7 @@ body{
 .section_client .box{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 50px;
+    gap: 30px;
     margin-top: 2rem;
 }
 
@@ -510,11 +505,22 @@ body{
 }
 
 
-.section_client .box .card img{
+.section_client .box .card .box_image{
+    width: 100px;
+    height: 100px;
+    margin: 1rem auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.section_client .card .box_image img{
     width: 100%;
-    border-radius: 1rem 1rem 0rem 0rem;
+    height: 100%;
+    border: 2px solid var(--hover-color);
+    border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 1rem;
+    text-align: center;
 }
 
 .section_client .box .card h2{
@@ -565,6 +571,7 @@ body{
 
 .section_footer .logo{
     width: 40%;
+
 }
 
 .section_footer .logo img{
@@ -654,7 +661,7 @@ body{
 
 .section_footer .follow_us .social_media .links a{
     list-style: none;
-    margin: 0.2rem 1rem;
+    margin: 0.2rem 0.5rem;
     cursor: pointer;
     width: 50px;
     height: 50px;
@@ -757,6 +764,14 @@ footer .copyright a{
         margin: 5rem 1rem;
     }
 
+     .programme .box{
+            display: grid;
+            width: 90%;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem
+
+    } 
+
     .programme .titre{
         font-size: 1.8rem;
     }
@@ -782,13 +797,6 @@ footer .copyright a{
         gap: 40px;
     }
 
-    .section_abonnement .box .card{
-        width: 100%;
-        /* height: 50%; */
-        /* padding: 2rem; */
-        margin: 0.6rem;
-        
-    }
 
     .section_abonnement .card_content h2{
         font-family: "Lexend", sans-serif;
@@ -818,12 +826,18 @@ footer .copyright a{
 
     }
 
+    .section_client{
+        width: 85%;
+        margin: 1rem auto;
+    }
+
     .section_client .titre{
         font-size: 1.7rem;
     }
 
 
     .section_footer{
+        margin-top: 5rem;
         width: 100%;
         gap: 50px;
     }
@@ -866,7 +880,7 @@ footer .copyright a{
 
 
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 750px) {
     .header_text h1{
         font-size: 1.5rem;
         margin-bottom: 1rem;
@@ -968,6 +982,299 @@ footer .copyright a{
 
     .section_client .titre{
         font-size: 1.4rem;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 300px) {
+    .navBar .logo{
+        width: 25%;
+    }
+
+    .navBar .fa-bars{
+        font-size: 1.5rem;
+        margin-right: 0.6rem;
+    }
+
+    .header_content{
+        margin: 1rem auto;
+        padding: 0.2rem;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header_text{
+        width: 100%;
+        padding: 0.5rem;
+    }
+    
+    .header_text h1{
+        font-family: "Lexend", sans-serif;
+        font-weight: bold;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .header_text .btn{
+        font-size: 0.8rem;
+        width: 50%;
+        display: block;
+        margin: 1rem auto;
+        text-align: center;
+    }
+
+
+    .header_content .header_img{
+        display: none;
+    }
+
+
+    .programme .titre{
+        font-size: 0.7rem;
+    }
+
+    .programme .box{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: -20px;
+    }
+
+    .section_trainer .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    .section_trainer .container .box_img{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .container .box_text h2{
+        font-size: 0.8rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .container .box_text p{
+        font-size: 0.7rem;
+    }
+
+
+    .section_abonnement h1{
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .section_footer .logo{
+        width: 40%;
+        margin: 1rem auto;
+    }
+
+
+    .section_footer .text_container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+
+    .section_footer .text_container li a{
+        display: block;
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+    .navBar .logo{
+        width: 25%;
+    }
+
+    .navBar .fa-bars{
+        font-size: 1.5rem;
+        margin-right: 0.6rem;
+    }
+
+    .header_content{
+        margin: 1rem auto;
+        padding: 0.2rem;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header_text{
+        width: 100%;
+        padding: 0.5rem;
+    }
+    
+    .header_text h1{
+        font-family: "Lexend", sans-serif;
+        font-weight: bold;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .header_text .btn{
+        font-size: 0.8rem;
+        width: 50%;
+        display: block;
+        margin: 1rem auto;
+        text-align: center;
+    }
+
+
+    .header_content .header_img{
+        display: none;
+    }
+
+
+    .programme .titre{
+        font-size: 0.7rem;
+    }
+
+    .programme .box{
+        width: 90%;
+        margin: 10px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* margin-left: -20px; */
+    }
+
+    .programme .box .card {
+        width: 100%;
+        height: 100%;
+    }
+
+    .programme .box .card:hover{
+        transform: translateY(0px);
+    }
+
+    .section_trainer .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    .section_trainer .container .box_img{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .container .box_text h2{
+        font-size: 0.8rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .container .box_text p{
+        font-size: 0.7rem;
+    }
+
+
+    .section_abonnement h1{
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .section_abonnement .box{
+        width: 100%;
+        margin-left:  2rem;
+        margin-right:  2rem;
+        display: flex;
+        flex-direction: column;
+        /* gap: 40px; */
+    }
+
+
+    
+.section_abonnement .box .card{
+    width: 80%;
+    margin: 1rem auto;
+    border-radius: 1rem;
+    background: rgba(51, 49, 49, 0.703);
+    box-shadow: 0px 2px 15px 1px rgba(255, 255, 255, 0.763);
+    transition: all 0.6s;
+}
+
+.section_abonnement .box .card:hover{
+    transform: scale(1.1);
+    box-shadow: none;
+    transform: scale(1);
+}
+
+
+    .section_client .titre{
+    font-size: 1rem;
+    }
+
+    .section_client .box{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem auto;
+    }
+    
+
+
+
+
+    
+
+    .section_footer{
+        width: 100%;
+        background:rgba(51, 49, 49, 0.703);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section_footer .logo{
+        width: 40%;
+        margin: 1rem auto;
+    }
+
+
+    .section_footer .text_container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+
+    .section_footer .text_container li a{
+        display: block;
+        font-size: 1rem;
+        text-align: center;
     }
 }
 
