@@ -40,6 +40,70 @@ body{
     background-repeat: no-repeat;
 }
 
+
+.dialogue{
+    position: fixed;
+    top: 10%;
+    left: 3%;
+    right: 2%;
+    width: 90%;
+    height: 100vh;
+    background: #f7f5f5;
+    z-index: 1;
+    overflow: scroll;
+    border-radius: 2rem;
+    display: none;
+    transition: all 0.4s ease-in-out;
+}
+
+
+.dialogue .img_box{
+    width: 95%;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.dialogue .img_box .card_img{
+    margin: 2rem auto;
+    width: 350px;
+    height: 350px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(116, 109, 109, 0.8);
+    transition: all 0.3s ease-in;
+}
+
+.dialogue .img_box .card_img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    border: 4px solid var(--bg-color);
+}
+
+
+.dialogue .img_box .card_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.dialogue .fa-regular{
+    position: absolute;
+    left: 94%;
+    top: 3%;
+    font-size: 3rem;
+    color: rgba(161, 73, 73, 0.868);
+    z-index: -1;
+    cursor: pointer;
+    transition: all ease-in 0.3s;
+}
+
+.dialogue .fa-regular:hover{
+    transform: rotate(180deg);
+}
+
 .navBar{
     position: fixed;
     width: 100%;
@@ -627,6 +691,29 @@ body{
     margin: 3rem;
 }
 
+.about .btn{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    width: 20%;
+    font-weight: bold;
+    margin: 3rem auto;
+    text-transform: capitalize;
+    padding: 0.7rem;
+    border: 1px solid var(--hover-color);
+    border-radius: 0.3rem;
+    background: var(--bg-color);
+    cursor: pointer;
+    box-shadow: 0px 2px 5px  var(--transparent-color);
+    transition: background 0.6s, all ease-in-out 0.4s;
+}
+
+.about .btn:hover{
+    transform: scale(1.1);
+    background: var(--transparent-color);
+    color: var(--bg-color);
+}
 
 .about .map_container{
     width: 100%;
@@ -1199,6 +1286,18 @@ footer .copyright a{
         cursor: pointer;
     }
 
+
+    .dialogue .img_box{
+        width: 90%;
+    }
+
+    .dialogue .fa-regular{
+        position: absolute;
+        left: 90%;
+        top: 3%;
+    }
+
+
     .navBar_items li a{
         display: block;
         margin-top: 1rem auto;
@@ -1316,6 +1415,17 @@ footer .copyright a{
     .header_text{
         width: 100%;
         padding: 0.5rem;
+    }
+
+    .dialogue .img_box{
+        width: 80%;
+        margin: 2rem auto;
+    }
+
+    .dialogue .fa-regular{
+        left: 86%;
+        top: 3%;
+        font-size: 1.8rem;
     }
     
     .header_text h1{
@@ -1520,6 +1630,17 @@ footer .copyright a{
 
     .navBar_items{
         width: 100%;
+    }
+
+    .dialogue .img_box{
+        width: 80%;
+        margin: 2rem auto;
+    }
+
+    .dialogue .fa-regular{
+        left: 80%;
+        top: 3%;
+        font-size: 1.5rem;
     }
 
     .header_content{
