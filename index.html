@@ -17,36 +17,38 @@
 <script src="https://kit.fontawesome.com/4b7d87b680.js" crossorigin="anonymous"></script>
 
 <link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
     <title>Fittness</title>
 </head>
 <body>
-    <header id="section_header">
-        <nav class="navBar">
-            <img src="images/logo.png" alt="logo Fittness" class="logo">
-            
-            <ul class="navBar_items">
-                <i class="fa-regular fa-rectangle-xmark"></i>
-                <li><a href="#section_header" class="active">Accueli</a></li>
-                <li><a href="#Programme">Programme</a></li>
-                <li><a href="#Abonnement">Abonnement</a></li>
-                <li><a href="#apropos">à propos de nous</a></li>
-            </ul>
-            <i class="fa-solid fa-bars"></i>
-        </nav>
-
-        <div class="header_content">
-            <div class="header_text">
-                <h1>Lorem ipsum dolor sit amet.</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                     Reprehenderit earum expedita nihli vero eaque temporibus?
-                    </p>
-                    <button class="btn">Abonnez-vous</button>
+    <section id="section_header">
+        <header id="section_header">
+            <nav class="navBar">
+                <img src="images/logo.png" alt="logo Fittness" class="logo">
+                
+                <ul class="navBar_items">
+                    <i class="fa-regular fa-rectangle-xmark"></i>
+                    <li><a href="#section_header" class="active">Accueli</a></li>
+                    <li><a href="#programme">Programme</a></li>
+                    <li><a href="#abonnement">Abonnement</a></li>
+                    <li><a href="#apropos">à propos de nous</a></li>
+                </ul>
+                <i class="fa-solid fa-bars"></i>
+            </nav>
     
+            <div class="header_content">
+                <div class="header_text">
+                    <h1>Total Gyme</h1>
+                    <p>Découvrez Total Gym à Bamako, votre destination ultime pour la remise en forme!.
+                        </p>
+                        <a href="#contact" class="btn">Abonnez-vous</a>
+        
+                </div>
+                    <div class="header_img"></div>
             </div>
-                <div class="header_img"></div>
-        </div>
-
-    </header>
+    
+        </header>
+    </section>
     <div class="header_text_container">
         <div class="box">
             <h2>300+</h2>
@@ -68,91 +70,131 @@
 
 
 
-    <section class="programme">
+    <section class="programme" id="programme">
         <h class="titre">Nos programmes d'entrainement</h>
         <div class="box">
             <div class="card">
                 <img src="images/f1.jpg" alt="notre programme">
-                <h2>Programme</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, quas nam vel commodi minus veritatis ipsum ipsa expedita! Similique, fugiat?</p>
+                <h2>Yoga et Pilates pour la Flexibilité et le Bien-Être</h2>
+                <p>Ce programme se concentre sur l'amélioration de la flexibilité, de la posture et de la force core, tout en réduisant le stress. Grâce à des séances de yoga et de Pilates guidées par des instructeurs expérimentés, vous apprendrez à synchroniser votre respiration avec des mouvements fluides, favorisant ainsi la relaxation et l'équilibre intérieur.$
+
+                </p>
             
             </div>
             <div class="card">
                 <img src="images/f2.jpg" alt="notre programme">
-                <h2>Programme</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, quas nam vel commodi minus veritatis ipsum ipsa expedita! Similique, fugiat?</p>
+                <h2>Programme de Musculation Intensive</h2>
+                <p>Conçu pour ceux qui souhaitent développer leur force et leur masse musculaire, ce programme combine des exercices de poids libres, des machines et des routines de haute intensité. 
+                    Nos entraîneurs certifiés vous guideront à travers des sessions personnalisées pour maximiser vos gains musculaires tout en minimisant les risques de blessure.
+                </p>
             
             </div>
             <div class="card">
                 <img src="images/f3.jpg" alt="notre programme">
-                <h2>Programme</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, quas nam vel commodi minus veritatis ipsum ipsa expedita! Similique, fugiat?</p>
+                <h2>Entraînement Cardio Brûle-Graisses</h2>
+                <p>Idéal pour ceux qui cherchent à améliorer leur endurance et à brûler des calories, ce programme inclut des séances de course sur tapis, de cyclisme, et de HIIT (High-Intensity Interval Training). Entraînez-vous avec des routines variées et dynamiques qui maintiendront votre rythme cardiaque élevé et vous aideront à perdre du poids de manière efficace.
+
+                </p>
             
             </div>
         </div>
     </section>
 
-    <section class="section_trainer">
+    <div class="section_trainer">
         <div class="container">
             <div class="box_img">
                 <img src="images/trainer.jpg" alt="notre coache">
             </div>
             <div class="box_text">
-                <h2>Calendrier du coache</h2>
-                <p>Lorem ipsum dolor sit amet, 
-                    consectetur adipisicing elit. Veritatis voluptas, molestiae magnam sunt, saepe deleniti voluptatum
-                     laborum vero quibusdam soluta, temporibus qui adipisci? Consectetur cumque atque vero eum debitis 
-                    velit numquam officiis impedit sapiente? Alias expedita rem voluptates ab sequi.
-                </p>
+                <h2>
+                    Calendrier d'Entraînement Hebdomadaire de Total Gym</h2>
+                <div class="calendrier">
+                    
+                    <ul>
+                        <h4><span>Lundi</span> : Musculation pour le Haut du Corps</h4>
+                        <li>Matin (6h - 7h) : Circuit de Poids Libres (Pectoraux, Dos, Épaules)</li>
+                        <li>Soir (18h - 19h) : Entraînement de Force (Triceps, Biceps, Avant-bras)</li>
+                        
+                        <h4><span>Mardi</span> : Entraînement en Groupe - Cardio et Renforcement</h4>
+                        <li>Matin (6h - 7h) : Séance de Cardio Dance</li>
+                        <li>Soir (18h - 19h) : Entraînement en Circuit pour la Perte de Poids.</li>
+
+                        <h4><span>Mercredi</span> : Séance de Course Intervalle sur Tapis.</h4>
+                        <li>Matin (6h - 7h) : Séance de Cardio Dance</li>
+                        <li>Soir (18h - 19h) : Entraînement en Circuit pour la Perte de Poids</li>
+
+                        <h4><span>Jeudi </span> :Entraînement en Groupe - Renforcement et Flexibilité.</h4>
+                        <li>Matin (6h - 7h) : Yoga Dynamique.</li>
+                        <li>Soir (18h - 19h) : Séance de Renforcement Musculaire en Groupe.</li>
+
+                        <h4><span>Vendredi  </span> :Musculation pour le Bas du Corps.</h4>
+                        <li>Matin (6h - 7h) : Squats et Fentes avec Poids.</li>
+                        <li>Soir (18h - 19h) : Entraînement de Force (Mollets, Ischio-jambiers, Quadriceps).</li>
+
+                        <h4><span>Samedi  </span> :Yoga et Pilates pour la Flexibilité.</h4>
+                        <li>Matin (6h - 7h) : Séance de Yoga Relaxante.</li>
+                        <li>Soir (18h - 19h) : Pilates pour le Renforcement du Core et la Posture.</li>
+                        
+                        <h4><span>Dimanche  </span> : Repos et Récupération.</h4>
+
+                       
+                    </ul>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
 
 
-    <section class="section_abonnement">
-        <h1>Notre Abonnement</h1>
+    <section class="section_abonnement" id="abonnement">
+        <h1>Types d'Abonnement à Total Gym</h1>
         <div class="box">
             <div class="card">
                 <div class="card_content">
-                    <h2>abonnement Basic</h2>
-                    <h3 class="price">15.000 F/ mois</h3>
+                    <h2>Fitness Essentiel</h2>
+                    <h3 class="price">10.000 F/ mois</h3>
                 <ul>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                   <li>Quo voluptatem iste tempora voluptate!</li>
-                   <li>Possimus mollitia facere culpa maiores!</li>
-                   <li>Mollitia optio cupiditate atque consequatur.</li>
+                    <li>Accès illimité à la salle de gym durant les heures d'ouverture</li>
+                    <li>Accès illimité à la salle de gym durant les heures d'ouverture</li>
+                    <li>Consultation initiale gratuite avec un coac</li>
+                    <li>Accès aux équipements de base</li>
                 </ul>
                 </div>
-                <button class="card_btn">Devenez un memebre</button>
+                <!-- <button class="card_btn">Devenez un memebre</button> -->
             </div>
         
        
             <div class="card">
                <div class="card_content">
-                <h2>Abonnement Premium</h2>
+                <h2>Performance plus</h2>
                 <h3 class="price">15.000 F/ mois</h3>
                 <ul>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                   <li>Quo voluptatem iste tempora voluptate!</li>
-                   <li>Possimus mollitia facere culpa maiores!</li>
-                   <li>Mollitia optio cupiditate atque consequatur.</li>
+                    <li>Accès illimité à la salle de gym durant les heures d'ouverture.</li>
+                   <li>Participation aux séances de groupe (quatre fois par semaine).</li>
+                   <li>Deux séances de coaching personnalisé par mois</li>
+                   <li>Programme d'entraînement personnalisé.</li>
+                   <li>Accès à des équipements premium.</li>
+                   <li>Réduction de 10 % sur les produits de nutrition vendus à la salle.</li>
                 </ul>
                </div>
-                <button class="card_btn">Devenez un memebre</button>
+                <!-- <button class="card_btn">Devenez un memebre</button> -->
             </div>
      
             <div class="card">
                 <div class="card_content">
-                    <h2>abonnement Elit</h2>
-                    <h3 class="price">15.000 F/ mois</h3>
+                    <h2>Transformation Totale</h2>
+                    <h3 class="price">20.000 F/ mois</h3>
                 <ul>
-                   <li>Lorem ipsum dolor sit amet.</li>
-                   <li>Quo voluptatem iste tempora voluptate!</li>
-                   <li>Possimus mollitia facere culpa maiores!</li>
-                   <li>Mollitia optio cupiditate atque consequatur.</li>
+                    <li>Accès illimité à la salle de gym durant les heures d'ouverture.</li>
+                    <li>Participation illimitée à toutes les séances de groupe.</li>
+                    <li>Coaching personnalisé hebdomadaire.</li>
+                    <li>Programme d'entraînement et de nutrition complet.</li>
+                    <li>Accès à tous les équipements premium et aux cours spécialisés.</li>
+                    <li>Réduction de 20 % sur les produits de nutrition et les événements spéciaux.</li>
+                    <li>Accès VIP aux nouvelles installations et aux événements exclusifs.</li>
                 </ul>
+
                 </div>
-                <button class="card_btn">Devenez un memebre</button>
+                <!-- <button class="card_btn">Devenez un memebre</button> -->
             </div>
         </div>
         </div>
@@ -161,9 +203,9 @@
 
     <!-- ----------- Commentaire de nos clients -------- -->
 
-    <section class="section_client">
+    <div class="section_client">
         
-        <h1 class="titre">ecouter ce que nos clients disent</h1>
+        <h1 class="titre">Témoignages de Nos Membres</h1>
         <div class="box">
             
             <div class="card">
@@ -171,7 +213,7 @@
                     <img src="https://i.pinimg.com/564x/fe/4e/65/fe4e659f1aa84bc93c0cc6ab0e477bbe.jpg" alt="notre programme">
 
                 </div>
-                <h2>Josephine Elena</h2>
+                <h2>Aminata Traoré</h2>
                 <div class="stars">
                     <ul>
                         <li><i class="fa-solid fa-star"></i></li>
@@ -181,7 +223,7 @@
                         <li><i class="fa-solid fa-star-half-stroke"></i></li>
                     </ul>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, quas nam vel commodi minus veritatis ipsum ipsa expedita! Similique, fugiat?</p>
+                <p>Total Gym a complètement transformé ma routine de fitness. Les cours de groupe sont motivants et l'ambiance est toujours positive. J'ai réussi à perdre 10 kg en trois mois grâce à leur programme de cardio et de musculation. Les entraîneurs sont très professionnels et toujours disponibles pour donner des conseils. Je recommande vivement cette salle de gym à tous ceux qui veulent améliorer leur santé et leur bien-être.</p>
             
             </div>
             <div class="card">
@@ -189,7 +231,7 @@
                     <img src="https://i.pinimg.com/564x/92/c6/01/92c601acdae5adb7033600186c1e57de.jpg" alt="notre programme">
 
                 </div>
-                <h2>Mark Tembely</h2>
+                <h2>Gaoussou Tembely</h2>
                 <div class="stars">
                     <ul>
                         <li><i class="fa-solid fa-star"></i></li>
@@ -199,7 +241,7 @@
                         <li><i class="fa-regular fa-star"></i></li>
                     </ul>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, quas nam vel commodi minus veritatis ipsum ipsa expedita! Similique, fugiat?</p>
+                <p>Depuis que j'ai rejoint Total Gym, j'ai constaté une amélioration significative de ma force et de mon endurance. Les équipements sont de haute qualité et l'atmosphère est toujours accueillante. Les séances de coaching personnalisé m'ont aidé à atteindre mes objectifs plus rapidement que je ne l'avais jamais imaginé. Total Gym est sans aucun doute la meilleure salle de sport de Bamako.</p>
             
             </div>
             <div class="card">
@@ -207,7 +249,7 @@
                     <img src="https://i.pinimg.com/736x/ee/e8/d4/eee8d4c9d7f4cd1eb2216d77f809b9b3.jpg" alt="notre programme">
 
                 </div>
-                <h2>Adrean Berthé</h2>
+                <h2>Amadou Berthé</h2>
                 <div class="stars">
                     <ul>
                         <li><i class="fa-solid fa-star"></i></li>
@@ -217,31 +259,104 @@
                         <li><i class="fa-regular fa-star"></i></li>
                     </ul>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, quas nam vel commodi minus veritatis ipsum ipsa expedita! Similique, fugiat?</p>
+                <p>Je suis membre de Total Gym depuis un an maintenant et je ne pourrais pas être plus satisfait. Les cours de HIIT et les entraînements de groupe sont exactement ce dont j'avais besoin pour rester motivé. J'ai non seulement perdu du poids, mais j'ai aussi gagné en muscle et en confiance. L'équipe est formidable et l'ambiance est très motivante. Merci Total Gym pour cette incroyable transformation!</p>
             
             </div>
         </div>
+    </div>
+
+
+
+    <!-- ------------------- About us ---------------- -->
+
+    <section class="about" id="apropos">
+        <div class="about_contents">
+
+            <h1>qui somme-nous ?</h1>
+            <p>Total Gym à Bamako, votre destination ultime pour la remise en forme! Chez Total Gym, nous nous engageons à offrir une expérience de fitness exceptionnelle avec des équipements de pointe et une atmosphère conviviale. Que vous soyez débutant ou athlète confirmé, notre équipe de professionnels dévoués est là pour vous guider et vous motiver à atteindre vos objectifs. Rejoignez-nous à Total Gym et transformez votre santé et votre bien-être dès aujourd'hui!
+            </p>
+        </div>
+            <div class="map_container">
+                <img src="https://westafricatravelguide.com/wp-content/uploads/2017/12/dakar-kedougou-saraya.jpg" alt="position">
+            </div>
+
+
+            
+            <section class="contact" >
+                <div class="container">
+                   
+                    <div class="left">
+                        
+                        <!-- <h2>Contact</h2> -->
+
+                            <form action="" id="contact">
+                                <div class="input_box">
+                                    <label for="nom">Votre Nom complèt</label>    
+                                    <input type="text" name="nom" id="nom" required placeholder="xxxxx yyyyyy">    
+                                </div>
+                                <div class="input_box">
+                                    <label for="phone">Votre numéro de téléphone</label>    
+                                    <input type="number" name="phone" id="phone" required placeholder="00 00 00 00">    
+                                </div>
+                                <div class="input_box">
+                                    <label for="email">Votre Adresse email</label>    
+                                    <input type="mail" name="nom" id="nom" required placeholder="exempl@gmail.com">    
+                                </div>
+                                <div class="input_box">
+                                    <label for="message">Votre message</label>    
+                                    <textarea name="message" id="message"  rows="10" required placeholder="Votre message ici..."></textarea>
+                                </div>
+                                <button class="btn">Envoyer</button>
+                            </form>
+                        </fieldset>
+                    </div>
+
+                    <div class="right">
+                        <h2>Lorem ipsum dolor </h2>
+                        <div class="line"></div>
+                        <div class="icon_box">
+                            <h4>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Notre Adresse domicile
+                            </h4>
+                            <li>Golf an face du goudron à 100m de diamond auto</li>
+                            <li>Hamdallaye ACI 2000 derrière l'agence d'Orange Ml</li>
+                        </div>
+                        <div class="icon_box">
+                            <h4>
+                                <i class="fa-solid fa-phone"></i>
+                               Numéro de téléphone
+                            </h4>
+                            <li>20 23 30 30</li>
+                            <li>77 20 11 11</li>
+                        </div>
+                        <div class="icon_box">
+                            <h4>
+                                <i class="fa-solid fa-envelope"></i>  
+                                Notre Adresse Adresse email
+                            </h4>
+                            <p>totalgyme223@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
     </section>
+
+
 
 </body>
 
 <footer >
-    <section class="section_footer">
+    <div class="section_footer">
         <div class="logo">
             <img src="images/logo.png" alt="logo fittness">
         </div>
 
         <div class="text_container">
-           <ul>
-            <li><a href="#">Lorem, ipsum.</a></li>
-            <li><a href="#">Quod, reiciendis!</a></li>
-            <li><a href="#">Officiis, repellat!</a></li>
-           </ul>
-           <ul>
-            <li><a href="#">Lorem, ipsum.</a></li>
-            <li><a href="#">Sequi, blanditiis!</a></li>
-            <li><a href="#">Odit, magnam!</a></li>
-        </ul>
+           <div class="silder box">
+            <!-- <img src="images/f2.jpg" alt="equipement"> -->
+        </div>
     </div>
 
         <div class="follow_us">
@@ -258,7 +373,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
     
     <p class="copyright">Copyright &copy; 2024, <a href="https://www.facebook.com/profile.php?id=100004983495888" target="blank">Cisse Mohamed</a> tous droit reservée.</p>
 </footer>

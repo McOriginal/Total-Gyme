@@ -9,6 +9,9 @@
     --transparent-color: #F8F9D7
 }
 
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     background: #000;
@@ -38,14 +41,30 @@ body{
 }
 
 .navBar{
+    position: fixed;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+.sticky{
+    width: 100%;
+    height: 120px;
+    padding: 1rem;
+    background: #f0ebeb;
+    z-index: 100;
+    transition: all ease-in 0.5s;
+}
+
+.sticky ul li a{
+    color: var(--bg-color);
+    font-weight: bold;
+}
+
+
 .logo{
-    width: 100px;
+    width:95px;
     margin: 2rem ;
 }
 
@@ -116,8 +135,9 @@ body{
 
 
 .header_content{
-    margin: 1rem 2rem;
+    margin-top: -1rem;
     padding: 1rem;
+    padding-top: 23%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -133,17 +153,21 @@ body{
 .header_text h1{
     font-family: "Lexend", sans-serif;
     font-weight: bold;
-    font-size: 2.5rem;
+    color: var(--transparent-color);
+    font-size: 5rem;
     margin-bottom: 1rem;
 }
 
 .header_text p{
-    font-size: 1rem;
+    font-size: 2rem;
 }
 
 
 
 .header_text .btn{
+    display: block;
+    text-align: center;
+    text-decoration: none;
     font-size: 1rem;
     width: 60%;
     font-weight: bold;
@@ -253,7 +277,8 @@ body{
 
 .programme .box .card{
     width: 100%;
-    height: 100vh;
+    height: 570px;
+    max-height: auto;
     border-radius: 1rem;
     margin-bottom: 1rem;
     display: flex;
@@ -286,7 +311,9 @@ body{
 
 .programme .box .card p{
     font-size: 0.9rem;
-    margin: 1rem 0.5rem;
+    /* margin: 1rem 0.5rem; */
+    padding: 5px 5px 20px 10px;
+    overflow: hidden;
 }
 
 
@@ -328,20 +355,30 @@ body{
 }
 
 .container .box_text h2{
-    font-size: 2rem;
+    font-size: 1.3rem;
     font-family: "Lexend", sans-serif;
     color: #f7f5f5;
     text-align: center;
     padding: 1.4rem;
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
     text-transform: capitalize;
     border-radius: 4rem 0.2rem 4rem 0.2rem;
     background: rgba(51, 49, 49, 0.703);
 }
 
-.container .box_text p{
+.container .box_text .calendrier ul h4{
+    color: var(--transparent-color);
+}
+
+.container .box_text .calendrier ul h4 span{
+    color: var(--hover-color);
+}
+
+
+.container .box_text .calendrier ul li{
     font-size: 1rem;
-    line-height: 1.4rem;
+    text-align: left;
+    line-height: 1.6rem;
 
 } 
 
@@ -360,7 +397,7 @@ body{
 
 .section_abonnement h1{
     font-size: 2rem;
-    width: 40%;
+    width: 70%;
     font-family: "Lexend", sans-serif;
     color: #f7f5f5;
     text-transform: capitalize;
@@ -383,8 +420,7 @@ body{
 
 
 .section_abonnement .box .card{
-    width: 100%;
-    /* max-width: 90%; */
+    width: 90%;
     margin: 1rem 0.2rem;
     border-radius: 1rem;
     background: rgba(51, 49, 49, 0.703);
@@ -416,7 +452,7 @@ body{
 }
 
 .section_abonnement .card_content ul li{
-    list-style-type: circle;
+    list-style-type: disc;
     font-size: 1rem;
     line-height: 2rem;
 }
@@ -460,7 +496,7 @@ body{
  
 .section_client{
     width: 100%;
-    margin: 10rem 1rem;
+    margin: 6rem auto;
     display: flex;
     flex-direction: column; 
     justify-content: space-between;
@@ -482,6 +518,7 @@ body{
 
 
 .section_client .box{
+    width: 80%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 30px;
@@ -533,6 +570,7 @@ body{
 .section_client .box .card p{
     font-size: 0.9rem;
     margin: 1rem 0.5rem;
+    letter-spacing: 1px;
 }
 
 
@@ -555,6 +593,196 @@ body{
 .section_client .card .stars ul li i{
     font-size: 1.2rem;
     color: var(--transparent-color);
+}
+
+
+/* --------------- About us ----------- */
+
+.about{
+    margin-top: 6rem;
+}
+
+.about .about_contents{
+    max-width: 100%;
+    height: 60vh;
+    background: url(https://i.pinimg.com/564x/8b/e1/fa/8be1faca2e67fb5ac772f9217f7e9eee.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 5rem;
+}
+
+.about .about_contents h1{
+    text-align: center;
+    margin: 2rem auto;
+    font-size: 4rem;
+    font-family: "Lexend", sans-serif;
+    color: #f7f5f5;
+    text-transform: capitalize;
+}
+
+
+.about .about_contents p{
+    font-size: 1.3rem;
+    margin: 3rem;
+}
+
+
+.about .map_container{
+    width: 100%;
+    height: 80vh;
+    margin-bottom: 5rem;
+}
+
+
+.about .map_container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(1px);
+}
+
+
+.contact .container{
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 4rem auto;
+}
+
+
+.contact .container .right{
+    /* flex-basis: 40%; */
+    max-width: 80%;
+    background: rgba(65, 62, 62, 0.795);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0px 0px 20px 4px rgba(36, 34, 36, 0.696);
+}
+
+.contact .right h2{
+    font-family: "Lexend", sans-serif;
+    font-size: 1.7rem;
+    text-align: center;
+    margin: 1.2rem auto;
+}
+
+
+.contact .right .icon_box h4{
+    /* margin-left: 1rem; */
+    padding: 1rem;
+    font-size: 1.1rem;
+    color: var(--transparent-color);
+    text-transform: capitalize;
+}
+
+.contact .right .icon_box h4 i{
+    font-size: 1.3rem;
+    color: var(--hover-color);
+    margin-right: 1rem;
+    text-align: center;
+}
+
+
+.contact .right .icon_box p, li{
+    margin-left: 1.4rem;
+    font-size: 1.1rem;
+    text-align: center;
+    color: #f7f5f5;
+}
+
+
+
+.contact .container .left{
+    flex-basis: 40%;
+    border: 3px solid var(--transparent-color);
+    padding: 2rem 1.2rem;
+}
+
+.contact .left h2{
+    font-size: 3rem;
+    text-align: center;
+    color: var(--transparent-color);
+    margin-bottom: 1.4rem;
+}
+
+
+
+.contact .left form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .left form .input_box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    margin: 0.4rem;
+}
+
+.contact .left form .input_box label{
+    font-size: 1.2rem;
+    color: var(--transparent-color);
+    text-align: left;
+    margin-bottom: 0.3rem;
+    text-transform: capitalize;
+}
+
+.contact .left form .input_box input, textarea{
+    width: 100%;
+    padding: 0.5rem;
+    outline: 1px solid var(--transparent-color);
+    border-radius: 0.4rem;
+}
+
+.contact .left form .input_box textarea{
+    height: 100px;
+    resize: none;
+}
+
+.contact .left form .input_box input:focus,
+.contact .left form .input_box input, textarea:focus{
+    font-size: 1.2rem;
+    color: var(--bg-color);
+}
+
+.contact .left form .input_box input:valid,
+.contact .left form .input_box input, textarea:valid{
+    border: 2px solid var(--bg-color);
+}
+
+
+.contact .left form .btn{
+    width: 50%;
+    min-width: 20%;
+    /* display: block; */
+    font-size: 1.3rem;
+    color: var(--transparent-color);
+    /* background: var(--text-color); */
+    background: transparent;
+    padding: 0.5rem;
+    font-weight: bold;
+    border: 1px solid var(--hover-color);
+    margin-top: 1rem;
+    border-radius: 4px;
+    box-shadow: 1px 3px 10px rgba(239, 232, 232, 0.8);
+    cursor: pointer;
+    transition: background ease-in 0.7s, all ease-in 0.4s;
+}
+
+.contact .left form .btn:hover{
+    transform: scale(0.9);
+    background: var(--bg-color);
+    /* color: var(); */
 }
 
 
@@ -723,9 +951,24 @@ footer .copyright a{
 
 
 @media screen and (max-width: 900px) {
+
+    
+.sticky{
+    width: 100%;
+    height: 100px;
+    padding-top: 3rem;
+    background: var(--bg-color);
+    z-index: 100;
+    transition: all ease-in 0.5s;
+}
+
+.sticky ul li a{
+    color: var(--bg-color);
+    font-weight: bold;
+}
     
     .logo {
-        width: 90px;
+        width: 60px;
         margin: 1rem;
     }
 
@@ -776,10 +1019,25 @@ footer .copyright a{
         font-size: 1.8rem;
     }
 
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container .box_text{
+        width: 90%;
+    }
+
+    .container .box_text .calendrier{
+        width: 100%;
+    }
+
     .container .box_text h2{
         font-size: 1.5rem;
-        margin-bottom: 2rem;
+        margin: 2rem auto;
     }
+
+    
 
     .section_abonnement h1{
         font-size: 1.7rem;
@@ -834,6 +1092,22 @@ footer .copyright a{
     .section_client .titre{
         font-size: 1.7rem;
     }
+
+
+    .contact .container .right{
+        flex-basis: 80%;
+    }
+    .contact .container .left{
+        flex-basis: 80%;
+    }
+
+
+    .about .about_contents h1{
+        font-size: 2.4rem;
+    }
+
+
+
 
 
     .section_footer{
@@ -893,21 +1167,41 @@ footer .copyright a{
     .navBar_items{
         position: fixed;
         top: -4%;
-        right: -100%;
+        left: 140%;
         display: flex;
         flex-direction: column;
         margin: 1rem auto;
         justify-content: center;
         align-items: center;
         background: var(--bg-color);
-        width: 30%;
+        width: 50%;
+        max-width: 40%;
+        min-width: 70%;
         height: 110vh;
         transition: all ease-in 0.5s;
     }
 
+    .navBar_items .fa-regular{
+        display: flex;
+        position: absolute;
+        right: 25%;
+        top: 2%;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .navBar .fa-bars{
+        display: block;
+        /* position: absolute;
+        right: 8%; */
+        font-size: 2rem;
+        margin-right: 2rem;
+        cursor: pointer;
+    }
+
     .navBar_items li a{
         display: block;
-        /* margin-top: -5rem; */
+        margin-top: 1rem auto;
         font-size: 1rem;
         border: none;
     }
@@ -942,22 +1236,9 @@ footer .copyright a{
         width: 0;
     }
 
-    .navBar_items .fa-regular{
-        display: flex;
-        right: -10%;
-        top: 5%;
-        font-size: 2rem;
-        margin: -3rem -8rem -3rem 0;
-        cursor: pointer;
-    }
 
-    .navBar .fa-bars{
-        display: block;
-        position: absolute;
-        right: 5%;
-        font-size: 2rem;
-        cursor: pointer;
-    }
+
+    
 
 
     .programme .box .card{
@@ -983,120 +1264,19 @@ footer .copyright a{
     .section_client .titre{
         font-size: 1.4rem;
     }
-}
 
 
-
-
-
-@media screen and (max-width: 300px) {
-    .navBar .logo{
-        width: 25%;
-    }
-
-    .navBar .fa-bars{
-        font-size: 1.5rem;
-        margin-right: 0.6rem;
-    }
-
-    .header_content{
-        margin: 1rem auto;
-        padding: 0.2rem;
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .header_text{
-        width: 100%;
-        padding: 0.5rem;
-    }
-    
-    .header_text h1{
-        font-family: "Lexend", sans-serif;
-        font-weight: bold;
+    .about .about_contents p{
         font-size: 1.2rem;
-        text-align: center;
+        margin-left: 2rem;
     }
 
-    .header_text .btn{
-        font-size: 0.8rem;
-        width: 50%;
-        display: block;
-        margin: 1rem auto;
-        text-align: center;
+    .about .about_contents{
+        height: 80vh;
     }
 
 
-    .header_content .header_img{
-        display: none;
-    }
-
-
-    .programme .titre{
-        font-size: 0.7rem;
-    }
-
-    .programme .box{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-left: -20px;
-    }
-
-    .section_trainer .container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        margin: 0;
-    }
-
-    .section_trainer .container .box_img{
-        width: 100%;
-        margin-bottom: 1rem;
-    }
-
-    .container .box_text h2{
-        font-size: 0.8rem;
-        margin-bottom: 1.2rem;
-    }
-
-    .container .box_text p{
-        font-size: 0.7rem;
-    }
-
-
-    .section_abonnement h1{
-        font-size: 1rem;
-        width: 100%;
-    }
-
-    .section_footer .logo{
-        width: 40%;
-        margin: 1rem auto;
-    }
-
-
-    .section_footer .text_container{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-
-    .section_footer .text_container li a{
-        display: block;
-        font-size: 1rem;
-        text-align: center;
-    }
 }
-
-
 
 
 
@@ -1106,14 +1286,24 @@ footer .copyright a{
 
 
 @media screen and (max-width: 500px) {
+
+
+    .navBar{
+        position: static;
+    }
+
+    
+
     .navBar .logo{
-        width: 25%;
+        width: 15%;
     }
 
     .navBar .fa-bars{
         font-size: 1.5rem;
         margin-right: 0.6rem;
     }
+
+    
 
     .header_content{
         margin: 1rem auto;
@@ -1244,8 +1434,39 @@ footer .copyright a{
     
 
 
+    .about .about_contents h1{
+        font-size: 1.6rem;
+    }
+
+    .about .about_contents p{
+        font-size: 1rem;
+    }
 
 
+    .contact .container .right{
+        /* padding: 1rem; */
+        width: 95%;
+    }
+
+    .about .right .icon_box h4{
+        margin-left: 0.1rem;
+        font-size: 1rem;
+        text-align: center;
+        padding: 0.4rem 0rem;
+    }
+
+
+    .about .right .icon_box p{
+        font-size: 0.8rem;
+    }
+
+    .about .about_contents{
+        height: 100vh;
+    }
+    .about .about_contents p{
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
     
 
     .section_footer{
@@ -1281,3 +1502,185 @@ footer .copyright a{
 
 
 
+
+@media screen and (max-width: 300px) {
+
+    .navBar{
+        position: static;
+    }
+
+    .navBar .logo{
+        width: 18%;
+    }
+
+    .navBar .fa-bars{
+        font-size: 1.5rem;
+        margin-right: 0.6rem;
+    }
+
+    .navBar_items{
+        width: 100%;
+    }
+
+    .header_content{
+        margin: 1rem auto;
+        padding: 0.2rem;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header_text{
+        width: 100%;
+        padding: 0.5rem;
+    }
+    
+    .header_text h1{
+        font-family: "Lexend", sans-serif;
+        font-weight: bold;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .header_text .btn{
+        font-size: 0.8rem;
+        width: 50%;
+        display: block;
+        margin: 1rem auto;
+        text-align: center;
+    }
+
+
+    .header_content .header_img{
+        display: none;
+    }
+
+
+    .programme .titre{
+        font-size: 0.7rem;
+    }
+
+    .programme .box{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: -20px;
+    }
+
+    .section_trainer .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    .section_trainer .container .box_img{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .container .box_text h2{
+        font-size: 0.8rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .container .box_text p{
+        font-size: 0.7rem;
+    }
+
+
+    .section_abonnement h1{
+        font-size: 1rem;
+        width: 100%;
+    }
+
+
+    .contact .right .icon_box h4{
+        font-size: 1rem;
+    }
+    .contact .right .icon_box p{
+        font-size: 0.5rem;
+        margin: 0;
+        text-align: left;
+    }
+
+
+    
+    .contact .container .right h2{
+        width: 100%;
+        margin: 1.5rem 0;
+        padding: 0;
+        font-size: 1.3rem;
+    }
+
+    .contact .container .right{
+        /* padding: 1rem; */
+        width: 95%;
+    }
+
+    .about .right .icon_box h4{
+        margin-left: 0.1rem;
+        font-size: 1rem;
+        text-align: center;
+        padding: 0.4rem 0rem;
+    }
+
+
+    .about .right .icon_box p{
+        font-size: 0.8rem;
+    }
+
+    .about .about_contents{
+        height: 100vh;
+    }
+
+    .about .about_contents h1{
+        font-size: 1.4rem;
+    }
+    .about .about_contents p{
+        margin-bottom: 2.7rem;
+        margin-top: 1rem;
+    }
+
+
+
+    .contact .left form .input_box label{
+        font-size: 1rem;
+    }
+
+    .contact .left form .input_box input, textarea{
+        width: 100%;
+        padding: 0.3rem;
+    }
+
+    .contact .left form .btn{
+        width: 80%;
+        min-width: 20%;
+    }
+
+
+
+    .section_footer .logo{
+        width: 40%;
+        margin: 1rem auto;
+    }
+
+
+    .section_footer .text_container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+
+    .section_footer .text_container li a{
+        display: block;
+        font-size: 1rem;
+        text-align: center;
+    }
+}
